@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أثر | رفيقك الإسلامي اليومي</title>
+
+  <!-- SEO -->
+  <meta name="description" content="أثر — تطبيق إسلامي يجمع القرآن الكريم، الأذكار، الأحاديث، الأدعية، أوقات الصلاة وأكثر، مع دعم المحتوى الأساسي دون اتصال بالإنترنت.">
+  <meta name="keywords" content="أثر, تطبيق إسلامي, القرآن الكريم, أذكار, أدعية, أحاديث, أوقات الصلاة, Athar, Islamic app">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070b09">
+
+  <!-- Canonical (placeholder — replace with the final deployed URL) -->
+  <!-- <link rel="canonical" href="https://athar.example.com/"> -->
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="أثر">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:title" content="أثر | رفيقك الإسلامي اليومي">
+  <meta property="og:description" content="اجعل لذكرك أثرًا — القرآن الكريم، الأذكار، الأحاديث، الأدعية، أوقات الصلاة وأكثر.">
+  <meta property="og:image" content="assets/logo/logo.png">
+  <meta property="og:url" content="https://athar.example.com/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="أثر | رفيقك الإسلامي اليومي">
+  <meta name="twitter:description" content="اجعل لذكرك أثرًا — القرآن الكريم، الأذكار، الأحاديث، الأدعية، أوقات الصلاة وأكثر.">
+  <meta name="twitter:image" content="assets/logo/logo.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "أثر",
+    "alternateName": "Athar",
+    "operatingSystem": "Android",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "ar",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "رفيقك الإسلامي اليومي — القرآن الكريم، الأذكار، الأحاديث، الأدعية، أوقات الصلاة وأكثر."
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+  <!-- Icon sprite (inline, no external requests) -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-android" viewBox="0 0 24 24">
+      <rect x="7" y="7" width="10" height="12" rx="3"/>
+      <path d="M9.5 5l1.2-1.8M14.5 5l-1.2-1.8"/>
+      <circle cx="10.4" cy="12" r=".9" fill="currentColor" stroke="none"/>
+      <circle cx="13.6" cy="12" r=".9" fill="currentColor" stroke="none"/>
+      <path d="M5 11v4M19 11v4"/>
+      <path d="M9 19v2M15 19v2"/>
+    </symbol>
+    <symbol id="i-quran" viewBox="0 0 24 24">
+      <path d="M12 6.5C10.5 5 8 4.5 4.5 4.5V18c3.5 0 6 .5 7.5 2 1.5-1.5 4-2 7.5-2V4.5c-3.5 0-6 .5-7.5 2Z"/>
+      <path d="M12 6.5V20"/>
+    </symbol>
+    <symbol id="i-sunmoon" viewBox="0 0 24 24">
+      <path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/>
+      <path d="M16 3v2M16 7v.01"/>
+    </symbol>
+    <symbol id="i-tasbih" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3.2"/>
+      <circle cx="12" cy="4" r="1.2"/>
+      <circle cx="12" cy="20" r="1.2"/>
+      <circle cx="4" cy="12" r="1.2"/>
+      <circle cx="20" cy="12" r="1.2"/>
+      <circle cx="6.3" cy="6.3" r="1"/>
+      <circle cx="17.7" cy="6.3" r="1"/>
+      <circle cx="6.3" cy="17.7" r="1"/>
+      <circle cx="17.7" cy="17.7" r="1"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 21s-7-4.6-9-8C1.5 10.2 3 7 6 7c2 0 3.5 1 4.5 2.5C11.5 8 13 7 15 7c3 0 4.5 3.2 3 6-2 3.4-9 8-9 8Z"/>
+    </symbol>
+    <symbol id="i-hadith" viewBox="0 0 24 24">
+      <rect x="6.5" y="3" width="11" height="18" rx="2.2"/>
+      <path d="M9.5 8h5M9.5 12h5M9.5 16h3"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M12 3.2l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8Z"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24">
+      <path d="M12 3.2l1.6 4.2 4.2 1.6-4.2 1.6L12 14.8l-1.6-4.2-4.2-1.6 4.2-1.6Z"/>
+      <path d="M18.5 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8Z"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5"/>
+      <path d="M12 7v5l3.5 2"/>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/>
+      <path d="M10 19a2 2 0 0 0 4 0"/>
+    </symbol>
+    <symbol id="i-remind" viewBox="0 0 24 24">
+      <path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/>
+      <path d="M10 19a2 2 0 0 0 4 0"/>
+      <circle cx="18" cy="5.5" r="1.6" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-bookstar" viewBox="0 0 24 24">
+      <path d="M12 6.5C10.5 5 8 4.5 4.5 4.5V18c3.5 0 6 .5 7.5 2 1.5-1.5 4-2 7.5-2V4.5c-3.5 0-6 .5-7.5 2Z"/>
+      <path d="M12 6.5V20"/>
+      <path d="M12 9l.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3Z"/>
+    </symbol>
+    <symbol id="i-light" viewBox="0 0 24 24">
+      <path d="M9 18h6M10 21h4"/>
+      <path d="M12 3a6 6 0 0 1 3.4 10.9c-.8.6-1.1 1.2-1.2 2.1H9.8c-.1-.9-.4-1.5-1.2-2.1A6 6 0 0 1 12 3Z"/>
+    </symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5"/>
+      <path d="M15.8 8.2l-2 5.4-5.4 2 2-5.4Z"/>
+    </symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24">
+      <path d="M12 3v9"/>
+      <path d="M8 8l4 4 4-4"/>
+      <path d="M4 17v1.5A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V17"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3v12"/>
+      <path d="M7 10l5 5 5-5"/>
+      <path d="M5 20h14"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M12 4v16"/>
+      <path d="M6 14l6 6 6-6"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <rect x="7" y="2.5" width="10" height="19" rx="2.5"/>
+      <path d="M11 18.5h2"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3l7 3v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6Z"/>
+      <path d="M9 12l2 2 4-4.5"/>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M4.5 12.5l5 5L19.5 6.5"/>
+    </symbol>
+    <symbol id="i-verse" viewBox="0 0 24 24">
+      <path d="M12 5c-2.5 0-4.5 1.5-4.5 4 0 1.8 1 3 2.5 3.7-.6 1.6-1.8 2.8-3.5 3.8 3.5.3 5.5-1.6 5.5-4.5 0-1-.3-1.9-.8-2.7.2 1-.8 1.8-1.7 1.6-.5-.1-.9-.5-1-1C8 8 9 6 12 6c3 0 4 2 4 4.4 0 1.3-.3 2.5-.7 3.6"/>
+    </symbol>
+  </svg>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <div class="nav-inner container">
+        <a href="#hero" class="brand" aria-label="أثر — العودة إلى الأعلى">
+          <img class="brand-logo" src="assets/logo/logo.png" alt="شعار تطبيق أثر" width="64" height="43">
+          <span class="brand-name">أثر</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="فتح قائمة التنقل">
+          <svg class="icon i-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon i-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a class="nav-link" href="#features">المميزات</a></li>
+          <li><a class="nav-link" href="#about">عن أثر</a></li>
+          <li><a class="nav-link nav-link-download" href="assets/apk/Athar-v1.0.0.apk" download="Athar-v1.0.0.apk" aria-label="تحميل تطبيق أثر — ملف أندرويد APK">تحميل</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero" aria-label="أثر — رفيقك الإسلامي اليومي">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="geo-pattern"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+        <canvas id="particles" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/logo/logo.png" alt="شعار تطبيق أثر" width="192" height="128">
+
+          <h1 class="hero-title">أثر</h1>
+          <p class="hero-headline">اجعل لذكرك <span class="gold">أثرًا</span></p>
+          <p class="hero-sub">رفيقك الإسلامي اليومي — القرآن الكريم، الأذكار، الأحاديث، الدعاء، أوقات الصلاة وأكثر.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="assets/apk/Athar-v1.0.0.apk" download="Athar-v1.0.0.apk" aria-label="تحميل تطبيق أثر — ملف أندرويد APK">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              تحميل تطبيق أثر
+            </a>
+            <a class="btn btn-ghost" href="#features">
+              اكتشف أثر
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+
+          <p class="hero-android">
+            <svg class="icon" aria-hidden="true"><use href="#i-android"/></svg>
+            متوفر للأندرويد · الإصدار 1.0.0
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone float">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-time">١٢:٣٠</div>
+              <div class="phone-top">
+                <img src="assets/logo/logo.png" alt="" width="40" height="27">
+                <span>أثر</span>
+              </div>
+              <div class="phone-card phone-prayer">
+                <span class="phone-label">الصلاة القادمة</span>
+                <strong>العصر</strong>
+                <span class="phone-time-sm">٥:١٥ م</span>
+              </div>
+              <div class="phone-row">
+                <span class="phone-chip">الأذكار</span>
+                <span class="phone-chip">دعاء اليوم</span>
+              </div>
+              <div class="phone-card phone-qibla">
+                <svg class="icon" viewBox="0 0 24 24"><use href="#i-compass"/></svg>
+                <div>
+                  <span class="phone-label">القبلة</span>
+                  <span class="phone-value">الاتجاه ٧١°</span>
+                </div>
+              </div>
+              <div class="phone-card phone-verse">
+                <svg class="icon" aria-hidden="true"><use href="#i-verse"/></svg>
+                <p>اجعل لذكرك أثرًا</p>
+              </div>
+            </div>
+          </div>
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#features" aria-label="انتقل إلى المميزات">
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">المميزات</span>
+          <h2 class="section-title">كل ما تحتاجه في تطبيق واحد</h2>
+          <p class="section-sub">مصمم ليكون رفيقك في يومك، من الصباح إلى المساء.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-quran"/></svg></span>
+            <h3>القرآن الكريم</h3>
+            <p>اقرأ وارتقِ — تجربة قراءة مريحة بأسلوب المصحف.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-sunmoon"/></svg></span>
+            <h3>أذكار الصباح والمساء</h3>
+            <p>أذكار يومك في مكان واحد، وقتما تحتاج.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-tasbih"/></svg></span>
+            <h3>الأذكار بعد الصلاة</h3>
+            <p>أذكار مرتبة ومريحة بعد كل صلاة.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-moon"/></svg></span>
+            <h3>أذكار النوم والاستيقاظ</h3>
+            <p>خِتام يومك وبدايته بذكر.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-heart"/></svg></span>
+            <h3>الأدعية</h3>
+            <p>أدعية من حياتك اليومية في متناولك.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-hadith"/></svg></span>
+            <h3>الأحاديث</h3>
+            <p>نصوص الأحاديث مع مصدرها.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-star"/></svg></span>
+            <h3>سنة اليوم</h3>
+            <p>سنة نبوية تتجدد مع كل يوم جديد.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-sparkle"/></svg></span>
+            <h3>دعاء اليوم</h3>
+            <p>دعاء مختار يصاحبك خلال يومك.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+            <h3>أوقات الصلاة</h3>
+            <p>مواقيت الصلاة مبنية على موقعك الزمني.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-bell"/></svg></span>
+            <h3>الأذان</h3>
+            <p>تنبيه واضح عند دخول وقت الصلاة.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-remind"/></svg></span>
+            <h3>التذكيرات</h3>
+            <p>تذكيرات لطيفة للأذكار والدعاء.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-bookstar"/></svg></span>
+            <h3>المعرفة الإسلامية</h3>
+            <p>محتوى معرفي مبني على مصادر موثوقة.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-light"/></svg></span>
+            <h3>التعلم الإسلامي</h3>
+            <p>ابدأ التعلم خطوة بخطوة.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-compass"/></svg></span>
+            <h3>القبلة</h3>
+            <p>معرفة اتجاه القبلة من مكانك.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon"><svg class="icon"><use href="#i-offline"/></svg></span>
+            <h3>العمل دون إنترنت</h3>
+            <p>المحتوى الأساسي متاح محليًا ويعمل دون اتصال.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QURAN ================= -->
+    <section class="section split-section" id="about">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <span class="eyebrow">القرآن الكريم</span>
+          <h2 class="section-title">القرآن الكريم، أينما كنت</h2>
+          <p class="section-sub">تجربة قراءة بأسلوب المصحف مع تنقّل سهل بين السور، ومحتوى أساسي متاح دون اتصال بالإنترنت.</p>
+          <ul class="checklist">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> قراءة بأسلوب المصحف</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> تنقّل سهل بين السور</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> وصول دون اتصال</li>
+          </ul>
+          <a class="btn btn-primary" href="assets/apk/Athar-v1.0.0.apk" download="Athar-v1.0.0.apk" aria-label="تحميل تطبيق أثر — ملف أندرويد APK">
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+            حمّل أثر الآن
+          </a>
+        </div>
+        <div class="split-visual reveal">
+          <div class="mushaf-card float-slow" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><use href="#i-quran"/></svg>
+            <div class="mushaf-lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p class="mushaf-ornament">﴿ ﴾</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADHAN ================= -->
+    <section class="section split-section alt" id="adhan">
+      <div class="container split">
+        <div class="split-visual reveal order-mobile-last">
+          <div class="timeline" role="list" aria-label="مراحل التذكير بالصلاة">
+            <div class="tline-item" role="listitem">
+              <span class="tline-dot dot-1"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div class="tline-body">
+                <h3>وقت الصلاة</h3>
+                <p>يُحدَّد من موقعك الزمني بدقة.</p>
+              </div>
+            </div>
+            <div class="tline-conn"></div>
+            <div class="tline-item" role="listitem">
+              <span class="tline-dot dot-2"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></span>
+              <div class="tline-body">
+                <h3>الأذان</h3>
+                <p>تنبيه واضح عند دخول الوقت.</p>
+              </div>
+            </div>
+            <div class="tline-conn"></div>
+            <div class="tline-item" role="listitem">
+              <span class="tline-dot dot-3"><svg class="icon" aria-hidden="true"><use href="#i-remind"/></svg></span>
+              <div class="tline-body">
+                <h3>تذكير مناسب</h3>
+                <p>تذكير لطيف يرافقك بعد الأذان.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="split-copy reveal">
+          <span class="eyebrow">الأذان</span>
+          <h2 class="section-title">حين يحين وقت الصلاة</h2>
+          <p class="section-sub">من وقت الصلاة، إلى الأذان، إلى تذكير مناسب — رحلة هادئة تبقيك حاضرًا.</p>
+          <p class="flow-label">وقت الصلاة <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> الأذان <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> تذكير مناسب</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DAILY ================= -->
+    <section class="section" id="daily">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">يوميًا</span>
+          <h2 class="section-title">كل يوم أثر جديد</h2>
+          <p class="section-sub">يتجدد المحتوى مع بداية كل يوم محلي.</p>
+        </div>
+
+        <div class="daily-stage reveal" id="dailyStage" aria-live="polite">
+          <div class="daily-card is-active" data-daily="0">
+            <span class="daily-icon"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <h3>سنة اليوم</h3>
+            <p>سنة نبوية صغيرة تضيف أثرًا حقيقيًا إلى يومك.</p>
+          </div>
+          <div class="daily-card" data-daily="1">
+            <span class="daily-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+            <h3>دعاء اليوم</h3>
+            <p>دعاء مختار يصاحبك ويسهل عليك الذكر.</p>
+          </div>
+        </div>
+        <div class="daily-controls reveal">
+          <button class="daily-dot is-active" type="button" data-goto="0" aria-label="عرض سنة اليوم">سنة اليوم</button>
+          <button class="daily-dot" type="button" data-goto="1" aria-label="عرض دعاء اليوم">دعاء اليوم</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADHKAR ================= -->
+    <section class="section alt" id="adhkar">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">الأذكار</span>
+          <h2 class="section-title">أذكارك في متناول يدك</h2>
+          <p class="section-sub">على مدار اليوم، في كل لحظة.</p>
+        </div>
+
+        <ul class="adhkar-list reveal">
+          <li class="adhkar-item"><span class="adhkar-icon"><svg class="icon" aria-hidden="true"><use href="#i-sunmoon"/></svg></span> أذكار الصباح</li>
+          <li class="adhkar-item"><span class="adhkar-icon"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg></span> أذكار المساء</li>
+          <li class="adhkar-item"><span class="adhkar-icon"><svg class="icon" aria-hidden="true"><use href="#i-tasbih"/></svg></span> الأذكار بعد الصلاة</li>
+          <li class="adhkar-item"><span class="adhkar-icon"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg></span> أذكار النوم</li>
+          <li class="adhkar-item"><span class="adhkar-icon"><svg class="icon" aria-hidden="true"><use href="#i-sunmoon"/></svg></span> أذكار الاستيقاظ</li>
+        </ul>
+
+        <p class="adhkar-note reveal">محتوى ديني مبني على مصادر موثوقة.</p>
+      </div>
+    </section>
+
+    <!-- ================= OFFLINE ================= -->
+    <section class="section" id="offline">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <span class="eyebrow">دون إنترنت</span>
+          <h2 class="section-title">ذكرك لا يحتاج إلى إنترنت</h2>
+          <p class="section-sub">المحتوى الأساسي — القرآن الكريم، الأذكار، والأدعية — متاح محليًا على جهازك ويعمل دون اتصال.</p>
+          <ul class="checklist">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> وصول فوري للمحتوى</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> ذكر في أي وقت ومكان</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> لا حاجة لاتصال دائم</li>
+          </ul>
+        </div>
+        <div class="split-visual reveal">
+          <div class="offline-visual" aria-hidden="true">
+            <svg class="icon offline-big"><use href="#i-offline"/></svg>
+            <svg class="icon offline-dot dot-a"><use href="#i-quran"/></svg>
+            <svg class="icon offline-dot dot-b"><use href="#i-tasbih"/></svg>
+            <svg class="icon offline-dot dot-c"><use href="#i-heart"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST / PRIVACY ================= -->
+    <section class="section alt" id="trust">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">الثقة</span>
+          <h2 class="section-title">بُنِيت على الثقة</h2>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>مصادر موثوقة</h3>
+            <p>محتوى ديني مبني على مصادر موثوقة ومتداولة.</p>
+          </article>
+          <article class="trust-card reveal">
+            <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span>
+            <h3>لا حاجة لحساب</h3>
+            <p>لا تحتاج إلى إنشاء حساب للبدء والاستخدام.</p>
+          </article>
+          <article class="trust-card reveal">
+            <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></span>
+            <h3>تحميل مباشر</h3>
+            <p>التطبيق يُحمَّل مباشرة من هذه الصفحة دون وسيط.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOWNLOAD / QR ================= -->
+    <section class="section" id="download">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <span class="eyebrow">حمّل أثر</span>
+          <h2 class="section-title">اجعل لأذكارك أثرًا في كل يوم</h2>
+          <p class="section-sub">حمّل أثر وابدأ رحلتك. ملف مباشر لأجهزة الأندرويد، حجمه نحو 58 ميغابايت.</p>
+          <a class="btn btn-primary btn-lg" href="assets/apk/Athar-v1.0.0.apk" download="Athar-v1.0.0.apk" aria-label="تحميل أثر — ملف أندرويد APK">
+            <svg class="icon" aria-hidden="true"><use href="#i-android"/></svg>
+            تحميل أثر
+          </a>
+          <p class="download-hint">متوفر للأندرويد · الإصدار 1.0.0</p>
+        </div>
+
+        <div class="split-visual reveal">
+          <div class="qr-wrap">
+            <div class="qr-card" id="qrCard" aria-label="رمز الاستجابة السريعة للتحميل">
+              <canvas id="qrCanvas" width="256" height="256" aria-hidden="true"></canvas>
+              <div class="qr-logo">
+                <img src="assets/logo/logo.png" alt="" width="56" height="37">
+              </div>
+            </div>
+            <p class="qr-label">امسح الكود لتحميل أثر</p>
+            <p class="qr-url" id="qrUrl"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/logo/logo.png" alt="شعار تطبيق أثر" width="72" height="48">
+        <span class="footer-name">أثر</span>
+        <p class="footer-tag">رفيقك الإسلامي اليومي</p>
+      </div>
+      <nav class="footer-nav" aria-label="روابط سريعة">
+        <a href="#features">المميزات</a>
+        <a href="#about">عن أثر</a>
+        <a href="assets/apk/Athar-v1.0.0.apk" download="Athar-v1.0.0.apk" aria-label="تحميل تطبيق أثر — ملف أندرويد APK">تحميل</a>
+      </nav>
+      <p class="footer-copy">© <span id="year">2026</span> أثر — جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/qrcode.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
